@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE HTML>
+<head>
+   <meta charset="UTF-8">
+   <title>moz-toolbar</title>
+</head>
+<body>
+   <style>
+      /* This Source Code Form is subject to the terms of the Mozilla Public
+      * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+      * You can obtain one at https://mozilla.org/MPL/2.0. */
+      .toolbar-container.scrolled .toolbar:not(:hover, :focus-within) {
+      border-color: transparent;
+      box-shadow: 0 2px 8px transparent;
+      float: left;
+      }
+      :root {
+      --body-padding: 64px;
+      --popup-border: rgba(0, 0, 0, 0.12);
+      --opaque-popup-border: #e0e0e0;
+      --popup-shadow: rgba(49, 49, 49, 0.3);
+      --grey-90-a10: rgba(12, 12, 13, 0.1);
+      --grey-90-a20: rgba(12, 12, 13, 0.2);
+      --grey-90-a30: rgba(12, 12, 13, 0.3);
+      --grey-90-a80: rgba(12, 12, 13, 0.8);
+      --grey-30: #d7d7db;
+      --blue-40: #45a1ff;
+      --blue-40-a30: rgba(69, 161, 255, 0.3);
+      --blue-60: #0060df;
+      --active-color: #0B83FF;
+      --font-size: 12;
+      --content-width: 22em;
+      --line-height: 1.6em;
+      --tooltip-background: var(--grey-90-a80);
+      --tooltip-foreground: white;
+      --toolbar-button-hover: var(--grey-90-a10);
+      --toolbar-button-active: var(--grey-90-a20);
+      }
+      body {
+      --main-background: #fff;
+      --main-foreground: #333;
+      --toolbar-border: var(--grey-90-a20);
+      --toolbar-box-shadow: var(--grey-90-a10);
+      --popup-button-hover: hsla(0,0%,70%,.4);
+      --popup-button-active: hsla(240,5%,5%,.15);
+      --popup-bgcolor: white;
+      --popup-button: #edecf0;
+      --selected-background: var(--blue-40-a30);
+      --selected-border: var(--blue-40);
+      --popup-line: var(--grey-30);
+      --font-value-border: var(--grey-30);
+      --font-color: #000000;
+      --icon-fill: #3b3b3c;
+      --icon-disabled-fill: #8080807F;
+      --link-foreground: var(--blue-60);
+      --link-selected-foreground: #333;
+      --visited-link-foreground: #b5007f;
+      }
+      body {
+      margin: 0;
+      padding: var(--body-padding);
+      background-color: var(--main-background);
+      color: var(--main-foreground);
+      }
+      body.loaded {
+      transition: color 0.4s, background-color 0.4s;
+      }
+      body.dark *::-moz-selection {
+      background-color: var(--selected-background);
+      }
+      a::-moz-selection {
+      color: var(--link-selected-foreground);
+      }
+      body.sans-serif,
+      body.sans-serif .remove-button {
+      font-family: Helvetica, Arial, sans-serif;
+      }
+      body.serif,
+      body.serif .remove-button {
+      font-family: Georgia, "Times New Roman", serif;
+      }
+      .container {
+      margin: 0 auto;
+      font-size: var(--font-size);
+      max-width: var(--content-width);
+      line-height: var(--line-height);
+      }
+      .light-button {
+      color: #333333;
+      background-color: #ffffff;
+      }
+      .toolbar-container {
+      position: sticky;
+      z-index: 2;
+      top: 32px;
+      height: 0;
+      margin-inline-start: calc(-1 * var(--body-padding));
+      width: max(var(--body-padding), calc((100% - var(--content-width)) / 2 + var(--body-padding)));
+      font-size: var(--font-size);
+      }
+      .toolbar {
+      padding-block: 16px;
+      border: 1px solid var(--toolbar-border);
+      border-radius: 6px;
+      box-shadow: 0 2px 8px var(--toolbar-box-shadow);
+      width: 32px; /* basic width, without padding/border */
+      --inline-padding: min(16px, calc(25% - 0.25 * 34px));
+      padding-inline: var(--inline-padding);
+      margin-inline-start: max(calc(50% - 17px - var(--inline-padding)), calc(100% - 96px - 34px - 2 * var(--inline-padding)));
+      font-family: Helvetica, Arial, sans-serif;
+      list-style: none;
+      user-select: none;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+      .toolbar {
+      transition-property: border-color, box-shadow;
+      transition-duration: 250ms;
+      }
+      .toolbar .button {
+      transition-property: opacity;
+      transition-duration: 250ms;
+      }
+      .toolbar-container.scrolled .toolbar:not(:hover, :focus-within) {
+      border-color: transparent;
+      box-shadow: 0 2px 8px transparent;
+      }
+      .toolbar-container.scrolled .toolbar:not(:hover, :focus-within) .button {
+      opacity: 0.6;
+      }
+      .toolbar-container.transition-location {
+      transition-duration: 250ms;
+      transition-property: width;
+      }
+      }
+      .toolbar-container.overlaps .button {
+      opacity: 0.1;
+      }
+      .dropdown-open .toolbar {
+      border-color: transparent;
+      box-shadow: 0 2px 8px transparent;
+      }
+      .reader-controls {
+      font-size: 11px;
+      }
+      .button {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: none;
+      border-radius: 4px;
+      margin: 4px 0;
+      background-color: transparent;
+      background-size: 16px 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: var(--font-color);
+      }
+      .button:hover,
+      .button:-moz-focusring {
+      background-color: var(--toolbar-button-hover);
+      }
+      .open .button,
+      .button:active {
+      background-color: var(--toolbar-button-active);
+      color: var(--active-color);
+      fill: var(--active-color);
+      }
+      .hover-label {
+      position: absolute;
+      top: 4px;
+      inset-inline-start: 36px;
+      line-height: 16px;
+      white-space: pre;
+      background-color: var(--tooltip-background);
+      color: var(--tooltip-foreground);
+      padding: 4px 8px;
+      border-radius: 2px;
+      visibility: hidden;
+      pointer-events: none;
+      }
+      .button:not(.dropdown-toggle):hover > .hover-label,
+      .button:not(.dropdown-toggle):-moz-focusring > .hover-label,
+      :not(.dropdown-open) > .dropdown > li > .button:hover > .hover-label,
+      :not(.dropdown-open) > .dropdown > li > .button:-moz-focusring > .hover-label {
+      visibility: visible;
+      }
+      button {
+      -moz-context-properties: fill;
+      color: var(--font-color);
+      fill: var(--icon-fill);
+      }
+      button:disabled {
+      fill: var(--icon-disabled-fill);
+      }
+      .toolbar button::-moz-focus-inner {
+      border: 0;
+      }
+      .dropdown {
+      text-align: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      }
+      .dropdown li {
+      margin: 0;
+      padding: 0;
+      }
+      .dropdown .dropdown-popup {
+      text-align: start;
+      position: absolute;
+      inset-inline-start: 40px;
+      z-index: 1000;
+      background-color: var(--popup-bgcolor);
+      visibility: hidden;
+      border-radius: 4px;
+      border: 1px solid var(--popup-border);
+      box-shadow: 0 4px 6px 0 var(--popup-shadow);
+      border-bottom-width: 0;
+      top: 0;
+      }
+      .open > .dropdown-popup {
+      visibility: visible;
+      }
+      .dropdown-arrow {
+      position: absolute;
+      height: 24px;
+      width: 16px;
+      inset-inline-start: -16px;
+      background-image: url("chrome://global/skin/reader/RM-Type-Controls-Arrow.svg");
+      display: block;
+      -moz-context-properties: fill, stroke;
+      fill: var(--popup-bgcolor);
+      stroke: var(--opaque-popup-border);
+      pointer-events: none;
+      }
+      .dropdown-arrow:dir(rtl) {
+      transform: scaleX(-1);
+      }
+      .style-dropdown .dropdown-arrow {
+      top: 7px;
+      }
+      .sans-serif-button {
+      font-family: Helvetica, Arial, sans-serif;
+      background-image: url("chrome://global/skin/reader/RM-Sans-Serif.svg");
+      }
+      :root[platform=macosx] .sans-serif-button {
+      padding-top: 3px;
+      }
+      .close-button {
+      -moz-context-properties: fill;
+      background-image: url("chrome://global/skin/reader/close-16.svg");
+      }
+      .style-button {
+      background-image: url("chrome://global/skin/reader/RM-Type-Controls-24x24.svg");
+      }
+      .minus-button {
+      background-size: 18px 18px;
+      background-image: url("chrome://global/skin/reader/RM-Minus-24x24.svg");
+      }
+      .plus-button {
+      background-size: 18px 18px;
+      background-image: url("chrome://global/skin/reader/RM-Plus-24x24.svg");
+      }
+      .content-width-minus-button {
+      background-size: 42px 16px;
+      background-image: url("chrome://global/skin/reader/RM-Content-Width-Minus-42x16.svg");
+      }
+      .content-width-plus-button {
+      background-size: 44px 16px;
+      background-image: url("chrome://global/skin/reader/RM-Content-Width-Plus-44x16.svg");
+      }
+      .line-height-minus-button {
+      background-size: 34px 14px;
+      background-image: url("chrome://global/skin/reader/RM-Line-Height-Minus-38x14.svg");
+      }
+      .line-height-plus-button {
+      background-size: 34px 24px;
+      background-image: url("chrome://global/skin/reader/RM-Line-Height-Plus-38x24.svg");
+      }
+      @media print {
+      .toolbar {
+      display: none !important;
+      }
+      }
+   </style>
+   <div class="toolbar">
+   <div class="reader-controls" articledir="ltr">
+      <button class="close-button button" aria-label="Закрыть"><span class="hover-label">Закрыть</span></button>
+      <ul class="dropdown style-dropdown">
+      <li>
+         <button class="dropdown-toggle button style-button" aria-label="Настройка шрифтов"><span class="hover-label">Настройка шрифтов</span></button>
+      </li>
+      <button class="close-button button" aria-label="Закрыть"><span class="hover-label">ч</span></button>
+      <ul class="dropdown style-dropdown">
+      <li>
+         <button class="dropdown-toggle button style-button" aria-label="Настройка шрифтов"><span class="hover-label">кто</span></button>
+      </li>
+   </div>
+</body>
+</html>
