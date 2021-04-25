@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Very important tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Gridix-CSS bundle with OpenMoji -->
+    <link href="./gridix-css_full1.0.css" rel="stylesheet">
+    <!-- jQuery (required) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Hello, Gridix-CSS!</title>
+  </head>
+  <body class="bg-dark" style="margin-left: 25px;">
+    <h1 id="hw">☆Hello, world!☆</h1>
+    <p>I created this page with <b>Gridix-CSS</b> (dark theme) and <b>OpenMoji</b>. It's very<span class="emoji">😎</span> !</p>
+    <h3>Several examples:</h3>
+    <p><code class="code__bg-dark">This is code block</code> and this is paragraph</p>
+    <a href="#">Link</a>
+    <br>
+    <br>
+    <button class="btn">Default button</button>
+    <button class="btn-danger">Danger button</button>
+    <button class="btn-info">Info button</button>
+    <button class="btn-success">Success button</button>
+    <button class="btn-gray">Gray (aka Disabled) button</button>
+    <br>
+    <br>
+    <p>Image withnout Gridix-CSS:</p>
+    <img src="./assets/flowers.png">
+    <p>Image <b>with Gridix-CSS</b>: (more variants <a href="./images.html">here</a>)</p>
+    <img class="img-bordered" src="./assets/flowers.png">
+    <br>
+    <div class="helpbox">
+     Wow, what is?
+      <span class="helpbox__text">Yes.</span>
+    </div> 
+    <!-- On Chrome-like browsers don't work. Works only in Mozilla-like browsers :(. I'm too lazy to fix this.
+      <h3>Gridix-CSS includes beautiful audio-player, too:</h3>
+    <audio class="gridex-player" controls>
+      <source src="https://ia800905.us.archive.org/19/items/FREE_background_music_dhalius/backsound.mp3"  type="audio/mp3">
+    </audio>  -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="collapsible-container">
+      <div class="collapsible-header">
+          <button>Expand</button>
+      </div>
+      <div class="collapsible-content">
+        <pre>Spoiler (Founders of Gridix-CSS call it "collapsible"). Made with jQuery <img src="https://cdn.discordapp.com/emojis/828161742726496256.png?v=1" style="width: 30px; border-radius: 16px;"></pre>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h3>Badges:</h3>
+    <span class="badge">Dog</span>
+    <span class="badge-green">Cat</span>
+    <span class="badge-info">Bot</span>
+    <span class="badge-red">Ant</span>
+    <span class="badge-gray">Mouse</span>
+    <br>
+    <br>
+    <div id="modal-container__dark">
+      <span id="close" onclick="closeModal()">X</span>
+      <div class="modal-header__dark">Modal header</div>
+      <hr class="modal-separator">
+      <div class="modal-content__dark">Modal content</div>
+      <hr class="modal-separator">
+      <div class="modal-btns"><button class="btn-gray" onclick="closeModal()">Close</button> <button class="btn-success">Confirm</button></div>
+    </div>
+    <input class="inpbox__dark" placeholder="InputBox">
+    <textarea class="textbox__dark" placeholder="Textarea" autocomplete="none" spellcheck="off"></textarea>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Search box:</h3>
+    <div class="searchbox">
+      <input class="inpbox__dark" placeholder="Enter here"> <button class="btn-success">Search</button>
+    </div>
+      <!-- spoilers, modal JS code (required) -->
+      <script src="./Main.js"></script>
+</body>
+</html>
