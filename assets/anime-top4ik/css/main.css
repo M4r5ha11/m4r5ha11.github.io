@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+:root {
+    --postbg: #444;
+    --postxtclr: #eee;
+    --darkbg: #222;
+    --default-fnt: 'Noto Sans';
+}
+
+body {
+    background: #222 !important;
+}
+
+.container {
+    font-family: var(--default-fnt) !important;
+}
+
+.posts {
+    color: var(--postxtclr);
+    width: 100%;
+    font-family: var(--default-fnt);
+}
+
+.card {
+    margin: 10px;
+    border-radius: .5em !important;
+    width: 16em;
+}
+
+.card-img-top {
+    border-top-left-radius: 0.5em !important;
+    border-top-right-radius: 0.5em !important;
+}
+
+.card-text {
+    color: #eee !important;
+    font-size: 0.9em;
+}
+
+header {
+    background: #FFB74D !important;
+    padding: 1em !important;
+    border-radius: 16px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#menuOpen {
+    vertical-align: middle;
+}
+.header_item {
+    display: inline;
+    font-weight: bold;
+    margin: 10px;
+  color: #eee;
+  background: #ad7135;
+    padding: 5px;
+    border-radius: 5px;
+}
