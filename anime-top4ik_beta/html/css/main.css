@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap');
+@import url('optimization.css');
+:root {
+    --postbg: #444;
+    --postxtclr: #eee;
+    --darkbg: #041620;
+    --default-fnt: 'Noto Sans';
+}
+* { 
+    box-sizing: border-box; 
+}
+body {
+    /* background: var(--darkbg) !important; */
+    background: url('https://cdn.discordapp.com/attachments/776497290390143076/870192120860913764/unknown.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--default-fnt) !important;
+}
+
+
+
+#posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+}
+
+.acard {
+    display: grid;
+    grid-template-rows: max-content 200px 1fr;
+    background: #212529;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 0 0 3px #000;
+}
+
+.acard img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* header {
+    background: #FFB74D !important;
+    padding: 1em !important;
+    border-radius: 16px;
+    margin-top: 5px;
+    text-align: center;
+} */
+.acard .btn {
+    font-family: var(--default-fnt);
+    font-size: 16px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+/* удаление границ (рамок) на кнопках, ибо на мобилках выглядит ужасно */
+.btn:focus, .btn:active {
+    box-shadow: none !important;
+  }
+#menuOpen {
+    vertical-align: middle;
+}
+.header_item {
+    display: inline;
+    font-weight: bold;
+    margin: 10px;
+  color: #eee;
+  background: #ad7135;
+    padding: 5px;
+    border-radius: 5px;
+}
+.navbar {
+    margin-top: 8px;
+    border-radius: 10px;
+}
+.acard_header h2 {
+    font-size: 20px !important;
+    word-break: break-all;
+}
+.acard_header,
+.acard_footer {
+    text-align: center;
+}
+.acard_content {
+    color: #eee;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.acard_footer {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.afooter {
+    background: #212121;
+    color: #eee;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom:0.5em;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.afooter a {
+    margin: 15px;
+}
+a {
+    text-decoration: none !important;
+}
+a:hover {
+    border-bottom: 1px solid;
+}

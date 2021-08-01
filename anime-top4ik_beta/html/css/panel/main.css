@@ -1,0 +1,48 @@
+body, 
+html {     
+        background: #eee !important;
+        color: #eee !important;
+        font-family: 'Roboto' !important;
+    }
+.toolbar {
+    background: #1de9b6 !important;
+    position: relative;
+}
+.zmdi {
+    color: #fff;
+}
+.alert-dialog, 
+.alert-dialog-mask {
+    display: none !important;
+}
+
+
+
+
+.appname {
+    color: #222;
+    text-align: center;
+    font-size: 3em;
+}
+
+/* .App {
+  
+   font-style: normal;
+   
+} */
+
+.editPostContainer textarea {
+    display: block;
+    margin: auto;
+   width: 100vh;
+   height: 50vh;
+   resize: none;
+   border-radius: 5px;
+   border: 1px solid #000;
+   outline: none;
+}
+.editPost_heading {
+    color: #222;
+    text-align: center;
+    font-size: 2em;
+}

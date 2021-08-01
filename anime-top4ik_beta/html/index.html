@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app>
+
+<head>
+   <!-- meta -->
+    <meta charset="UTF-8">
+    <title>Anime-Top4ik | Смотреть аниме с комфортом!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#29c93f">
+     <!-- end meta -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <header>
+            <h3 id="siteName">Anime-Top4ik</h3>
+                <p class="header_item">Жанр</p>
+                <p class="header_item">Расписание</p>
+                <p class="header_item">Контакты</p>
+                <p class="header_item">Год</p>
+                <p class="header_item">Правообладателям</p>
+        </header> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu-mobile">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Anime-Top4ik</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Жанр
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">выключите гимн,</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">скомкайте флаг!</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">продажные СМИ...</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">НЕ УБИВАЙ!!!</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">ДАВАЙ ПОСТРОИМ ХРАМ СРЕДИ МОГИЛ!</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Год
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">выключите гимн,</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">скомкайте флаг!</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">продажные СМИ...</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">НЕ УБИВАЙ!!!</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">ДАВАЙ ПОСТРОИМ ХРАМ СРЕДИ МОГИЛ!</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Тип
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">выключите гимн,</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">скомкайте флаг!</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">продажные СМИ...</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">НЕ УБИВАЙ!!!</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">ДАВАЙ ПОСТРОИМ ХРАМ СРЕДИ МОГИЛ!</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-muted" aria-current="page" href="/owners">Правообладателям</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-muted" aria-current="page" href="/support">Написать нам</a>
+                  </li>
+                </ul>
+
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Тут можно искать аниме..." aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Искать</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+
+        <div id="posts">
+  
+                <article class="acard">
+                  <div class="acard_header">
+                      <h2>Сумеречный разум 2041 / Night Head 2041</h2>
+                    </div>
+                  <img src="https://a106.agorov.org/uploads/posts/2021-07/1626196891_1.jpg" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+                  <div class="acard_content">
+                      <p id="t">Быть не таким, как все, видится едва ли не целью жизни. Многие обычные люди грезят о том, чтобы обзавестись какими-либо сверхспособностями. Но так ли уж хорошо ими владеть, знают только те, кому они даны на самом деле.</p>
+                  </div>
+                  <footer class="acard_footer">Жанр: ТВ, Онгоинги, 2021, Драма, Детектив, Приключения, Фантастика</footer>
+                  <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+              </article>
+
+              <article class="acard">
+                <header class="acard_header">
+                    <h2>Герой-рационал перестраивает королевство / Genjitsu Shugi Yuusha no Oukoku Saikenki</h2>
+                </header>
+                <img src="https://a106.agorov.org/uploads/posts/2021-07/1625250723_1.jpg" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+                <div class="acard_content">
+                    <p> В совершенно непривычной атмосфере оказался Сома Кадзуя, а все потому, что парнишку призвали в другой мир те, кто нуждался в герое. Без героя нигде не обойтись. Вот только приключения парня в новом мире начались несколько скомкано...</p>
+                </div>
+                <footer class="acard_footer">Жанр: ТВ, Онгоинги, 2021, Приключения, Романтика, Фэнтези</footer>
+                <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+            </article>
+
+
+            <article class="acard">
+              <header class="acard_header">
+                  <h2>Джахи не будет отчаиваться! / Jahy-sama wa Kujikenai!</h2>
+              </header>
+              <img src="https://a106.agorov.org/uploads/posts/2021-07/1627758746_1.jpg" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+              <div class="acard_content">
+                  <p>В любом обществе имеется эдакая иерархия, согласно которой кто-то располагается на самом верху пирамиды, кто-то в середине, а кому-то приходится и вовсе довольствоваться низким положением. Демонический мир не стал исключением. В нем также существовала градация сущностей, причем конкуренция была невероятно жесткой...</p>
+              </div>
+              <footer class="acard_footer">Жанр: TВ, Онгоинги, 2021, Комедия, Сёнэн</footer>
+              <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+          </article>
+
+
+          <article class="acard">
+            <header class="acard_header">
+                <h2>Пять невест / Go-Toubun no Hanayome</h2>
+            </header>
+            <img src="https://a106.agorov.org/uploads/posts/2018-12/1545314427_01.jpg" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+            <div class="acard_content">
+                <p>Общение с красотками не каждому парню необходимо. Угрюмый Футаро Уэсуги учился в старших классах, когда в жизни его семьи произошли события, кардинально изменившие его планы. Он хорошо запомнил тот день, когда к нему в классной аудитории подсела миленькая особа и попросила его поднатаскать её по школьным дисциплинам. Футаро проявил в беседе с девушкой грубость, что было ему вполне свойственно, и они вдрызг разругались.</p>
+            </div>
+            <footer class="acard_footer">Жанр: драма, дибилизм, unix vs linux</footer>
+            <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+        </article>
+
+        <article class="acard">
+          <header class="acard_header">
+              <h2>короткое название</h2>
+          </header>
+          <img src="https://cdn.discordapp.com/attachments/776497290390143076/870249418471931904/unixvslinux.png" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+          <div class="acard_content">
+              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. 
+                I am alone, and feel the charm of existence in this spot, which was.</p>
+          </div>
+          <footer class="acard_footer">Жанр: драма, дибилизм, unix vs linux</footer>
+          <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+      </article>
+
+
+
+      <article class="acard">
+        <header class="acard_header">
+            <h2>короткое название</h2>
+        </header>
+        <img src="https://cdn.discordapp.com/attachments/776497290390143076/870249418471931904/unixvslinux.png" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+        <div class="acard_content">
+            <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. 
+              I am alone, and feel the charm of existence in this spot, which was.</p>
+        </div>
+        <footer class="acard_footer">Жанр: драма, дибилизм, unix vs linux</footer>
+        <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+    </article>
+
+
+
+
+    <article class="acard">
+      <header class="acard_header">
+          <h2>короткое название</h2>
+      </header>
+      <img src="https://cdn.discordapp.com/attachments/776497290390143076/870249418471931904/unixvslinux.png" alt="Смотреть аниме с комфортом на Anime-Top4ik!">
+      <div class="acard_content">
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. 
+            I am alone, and feel the charm of existence in this spot, which was.</p>
+      </div>
+      <footer class="acard_footer">
+        Жанр: драма, дибилизм, unix vs linux
+      </footer>
+      <button type="button" class="btn btn-primary btn-sm">Смотреть</button>
+  </article>
+        </div>
+        <!-- end container -->
+        <div class="afooter">
+          <h5>Anime-Top4ik</h5>
+          <p style="font-size: 13px;">Bесь материал на сайте предоставлен только для домашнего ознакомительного просмотра.</p>
+          <a href="/owners"><span>Правообладателям</span></a>
+          <a href="/support"><span>Написать нам</span></a>
+          <a href="/rules"><span>Правила</span></a>
+          <a href="/about"><span>Разработчики</span></a>
+        </div>
+    </div>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/utilites/getVersion.js"></script>
+</body>
+
+</html>

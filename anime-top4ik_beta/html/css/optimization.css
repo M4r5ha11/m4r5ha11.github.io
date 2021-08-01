@@ -1,0 +1,44 @@
+/* адаптивка под смартфоны, планшетики и квадратные моники;) */
+@media screen and (max-width: 730px)  {
+    body {
+         background: #2b3b47 !important;
+    }
+}
+@media screen and (max-width: 700px)  {
+    body {
+         background: #2b3b47 !important;
+    }
+}
+@media screen and(max-width: 731px) {
+    body {
+         background: #2b3b47 !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    body {
+         background: #2b3b47 !important;
+    }
+}
+@media screen and (max-width: 600px)  {
+    body {
+         background: #2b3b47 !important;
+    }
+}
+
+@media screen and (max-width: 500px){
+    body {
+         background: #2b3b47 !important;
+    }
+}
+   
+@media screen and (max-width: 1280px) {
+    body {
+        background: #2c1342 !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background: #2c1342 !important;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head> 
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления</title>
+    <meta name="theme-color" content="#29c93f">
+     <!-- end meta -->
+     <script src="https://cdn.jsdelivr.net/npm/angular@1.7.3/angular.min.js"></script>    
+     <link rel="stylesheet" href="./css/panel/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+        
+        <script>
+            const dG1u = `${atob('QURNSU5fUEFORUw=')} (${atob('djAuMw==')})`;
+        </script>   
+
+<div id="angular-app" data-ng-app="app">
+    <div data-ng-controller="MainCtrl as vm" class="">
+        <h2 class="appname">{{ app }}</h2>
+        <div class="tabs is-centered is-medium">
+            <ul>
+              <li><a id="SHOW_editPost">{{ editpost }}</a></li>
+              <li><a id="SHOW_usersDashboard">{{ usersdashboard }}</a></li>
+              <li><a>{{ wtfomgg }}</a></li>
+            </ul>
+          </div>
+            <div class="editPostContainer">
+                <h3 class="editPost_heading">Редактировать пост</h3>
+                <textarea class="postContent" spellcheck="off" autocomplete="off"></textarea>
+            </div>
+    </div>
+  </div>
+        
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="./js/panel/app.js"></script>
+</body>
+</html>
