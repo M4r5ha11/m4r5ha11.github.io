@@ -1,4 +1,4 @@
-<script>
+
 	// Awesomplete - Lea Verou - MIT license
 !function () {
   function t(t) {
