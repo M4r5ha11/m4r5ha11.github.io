@@ -88,7 +88,7 @@ const pages = {
         },
         {
             elem: 'div',
-            content: `<a href="/">To home</a>`,
+            content: `<a href="/fiple/docs/">To home</a>`,
             class: ['desc']
         }
     ],
