@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #212121;
+    color: #eee;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.heading {
+    text-align: left;
+    margin-left: 2em;
+    color: #fff;
+}
+
+.errdesctitle {
+    text-align: left;
+    margin-left: 3.5em;
+    margin-bottom: 1em;
+    color: #777;
+}
+
+.desc {
+    text-align: left;
+    margin-left: 7em;
+}
+
+a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.article-link {
+    color: #dbdbdb;
+}
+
+#approot {
+    margin-top: 1em;
+}
