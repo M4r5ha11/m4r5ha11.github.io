@@ -13,9 +13,9 @@
   <link rel="stylesheet" href="./css/components/sidemenu-peoplelistmenu.css">
 
   <title>general - michi</title>
-  <link rel="icon" href="/assets/logo.png">
+  <link rel="icon" href="./assets/logo.png">
 
-  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="apple-touch-icon" href="./assets/logo.png">
 
   <meta name="title" content="Michi">
   <meta name="description" content="Michi - minimal web chat for your needs.">
@@ -23,15 +23,15 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Michi">
   <meta property="og:description" content="Michi - minimal web chat for your needs.">
-  <meta property="og:image" content="/assets/logo.png">
+  <meta property="og:image" content="./assets/logo.png">
 
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Michi">
   <meta property="twitter:description" content="Michi - minimal web chat for your needs.">
-  <meta property="twitter:image" content="/assets/logo.png">
+  <meta property="twitter:image" content="./assets/logo.png">
   <style>
     @font-face {
-      src: url('../assets/RobotoMono-Regular.ttf') format('truetype');
+      src: url('./assets/RobotoMono-Regular.ttf') format('truetype');
       font-family: 'Roboto Mono';
       font-style: normal;
       font-weight: normal;
@@ -39,14 +39,14 @@
     }
 
     @font-face {
-      src: url('../assets/MI.woff2') format('woff2');
+      src: url('./assets/MI.woff2') format('woff2');
       font-family: 'MI';
       font-style: normal;
       font-weight: normal;
     }
 
     @font-face {
-      src: url('../assets/NotoSans-Regular.ttf') format('truetype');
+      src: url('./assets/NotoSans-Regular.ttf') format('truetype');
       font-family: 'Noto Sans';
       font-style: normal;
       font-weight: normal;
@@ -74,7 +74,7 @@
       alert('Sorry but Michi requires access to localStorage to read user config');
 
     if (!localStorage.getItem('michi_nname') || !localStorage.getItem('michi_email'))
-      location.href = '/join.html';
+      location.href = './join.html';
   </script>
   <div class="shade" hidden></div>
   <main>
