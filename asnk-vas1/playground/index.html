@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>asnk vas-1 playground</title>
+
+  <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body>
+  <main>
+    <h1 class="main-title">
+      Asnk
+
+      <span class="muted">vas-1</span>
+    </h1>
+
+    <p class="main-description">welcome to Asnk vas-1 playground!</p>
+
+    <section style="width: 350px;">
+      <h2>input text</h2>
+      <textarea id="input-text" autocomplete="off" placeholder="Enter your text here"></textarea>
+      <br>
+      <br>
+      <button id="encrypt-btn" class="success-btn">Encrypt</button>
+    </section>
+
+    <section>
+      <h2>Salt options</h2>
+      <p>
+        current salt value:
+      <p id="salt"></p>
+      </p>
+
+      <label for="salt-variant_selector">salt variant:<label>
+          <select name="salt-variant_selector" id="salt-variant_selector" autocomplete="off">
+            <option value="cryptoRandomNumber">crypto random number</option>
+            <option value="unsafeSalt">unsafe salt (Math.random())</option>
+          </select>
+    </section>
+
+    <section>
+      <h3>encrypted output</h3>
+      <p id="encrypted-output"></p>
+    </section>
+  </main>
+
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
