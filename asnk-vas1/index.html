@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>asnk vas-1 test</title>
+
+  <link rel="stylesheet" href="./css/base.css">
+
+  <script src="./asnk/index.js" type="module"></script>
+</head>
+
+<body>
+  <main>
+    <h1 class="main-title">
+      Asnk
+
+      <span class="muted">vas-1</span>
+    </h1>
+
+    <p class="main-description">characters, that failed to encrypt would be replaced with "?" (question mark)</p>
+
+    <section>
+      <h2>input text</h2>
+      <p id="input-text"></p>
+    </section>
+
+    <section>
+      <h2>salt (encryption key; must be a number)</h2>
+      <p id="salt"></p>
+    </section>
+
+    <section>
+      <h3>encrypted output</h3>
+      <p id="encrypted-output"></p>
+    </section>
+
+    <section>
+      <h3>decrypted output</h3>
+      <p id="output"></p>
+    </section>
+
+    <section>
+      <h2>perfomance (execution time)</h2>
+
+      <h4>
+        asnk.encrypt:
+        <span id="perf-encrypt" class="font-normal"></span>
+      </h4>
+
+
+      <h4>
+        asnk.decrypt:
+        <span id="perf-decrypt" class="font-normal"></span>
+      </h4>
+    </section>
+  </main>
+
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
